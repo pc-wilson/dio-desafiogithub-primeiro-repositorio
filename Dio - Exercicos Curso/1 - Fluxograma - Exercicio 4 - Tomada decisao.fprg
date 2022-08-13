@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PC-Wi"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-08-07 10:16:22 "/>
+        <attribute name="created" value="UEMtV2k7REVTS1RPUC01MUJNS1MxOzIwMjItMDgtMDc7IjA5OjU2OjE1ICI7MjYyMQ=="/>
+        <attribute name="edited" value="UEMtV2k7REVTS1RPUC01MUJNS1MxOzIwMjItMDgtMDc7IjEwOjE2OjIyICI7MTsyNzE1"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Cliente" type="String" array="False" size=""/>
+            <declare name="Cartao" type="Boolean" array="False" size=""/>
+            <declare name="Numero" type="String" array="False" size=""/>
+            <input variable="Cliente"/>
+            <input variable="Cartao"/>
+            <if expression="Cartao">
+                <then>
+                    <input variable="Numero"/>
+                </then>
+                <else>
+                    <output expression="&quot;Seu cadastro n&#227;o foi conclu&#237;do, a loja s&#243; aceita commpra com cart&#227;o.&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

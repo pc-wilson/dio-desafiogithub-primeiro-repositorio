@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PC-Wi"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-08-07 12:07:12 "/>
+        <attribute name="created" value="UEMtV2k7REVTS1RPUC01MUJNS1MxOzIwMjItMDgtMDc7IjEwOjE2OjQyICI7MjYwOQ=="/>
+        <attribute name="edited" value="UEMtV2k7REVTS1RPUC01MUJNS1MxOzIwMjItMDgtMDc7IjEyOjA3OjEyICI7NDsyNzE5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="nome, sobrenome" type="String" array="False" size=""/>
+            <declare name="vendaJan, vendaFev, vendaMar, vendaAbr, Media, bonus3, bonus10" type="Real" array="False" size=""/>
+            <output expression="&quot;Digite seu nome:&quot;" newline="True"/>
+            <input variable="nome"/>
+            <output expression="&quot;Digite seu sobrenome:&quot;" newline="True"/>
+            <input variable="sobrenome"/>
+            <output expression="&quot;Digite a venda de Janeiro: &quot;" newline="True"/>
+            <input variable="vendaJan"/>
+            <output expression="&quot;Digite a venda de Fevereiro: &quot;" newline="True"/>
+            <input variable="vendaFev"/>
+            <output expression="&quot;Digite a venda de Mar&#231;o:&quot;" newline="True"/>
+            <input variable="vendaMar"/>
+            <output expression="&quot;Digite a venda de Abril:&quot;" newline="True"/>
+            <input variable="vendaAbr"/>
+            <assign variable="Media" expression="(vendaJan+vendaFev+vendaMar+vendaAbr)/4"/>
+            <output expression="&quot;Sua m&#233;dia foi de: &quot;&amp;Media" newline="True"/>
+            <if expression="Media&gt;=4500">
+                <then>
+                    <output expression="&quot;Voc&#234; ter&#225; um bonus de 10% sobre sua m&#233;dia de venda.&quot;" newline="True"/>
+                    <assign variable="bonus10" expression="media*0.10"/>
+                    <output expression="&quot; Valor a receber de bonus: &quot;&amp;bonus10" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Voc&#234; ter&#225; um bonus de 3% sobre sua m&#233;dia de venda.&quot;" newline="True"/>
+                    <assign variable="bonus3" expression="Media*0.03"/>
+                    <output expression="&quot; Valor a receber de bonus: &quot;&amp;bonus3" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
